@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue-en</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  </head>
+  <body>
+    <div id="app">
+
+      <template>
+        <div id="app">
+          <div class="container">
+
+          <form action="http://localhost:8081/projects" method="POST" @submit.prevent="onSubmit" @keyDown="errors.clear($event.target.name)">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Text input" name="name" v-model="name" >
+              </div>
+            </div>
+
+            <span class="help is-danger" v-text="errors.get('name')"  v-if="errors.has('name')"></span>
+
+            <div class="field">
+              <label class="label">Description</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Text input" name="description" v-model="description">
+              </div>
+            </div>
+
+            <span class="help is-danger" v-text="errors.get('description')" v-if="errors.has('description')"></span>
+
+            <div class="field is-grouped">
+              <div class="control">
+                <button type="submit" class="button is-link" :disabled="errors.any()">Submit</button>
+              </div>
+              <div class="control">
+                <button class="button is-text">Cancel</button>
+              </div>
+            </div>
+          </form>
+
+          </div>
+        </div>
+      </template>
+
+    </div>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-form": "^0.12.6",
+    "express-validator": "^5.0.1",
+    "express-validator-helper": "^1.0.1",
+    "i": "^0.3.6",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.15.1",
+    "npm": "^5.6.0"
+  }
+}
